@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - WeatherRoute: Safer Navigation</title>
+    <style>
+        :root {
+            --primary: #007AFF;
+            --dark: #1c1c1e;
+            --light: #f2f2f7;
+            --text: #1d1d1f;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--light);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h1 { color: var(--primary); margin-top: 0; }
+        h2 { color: #333; margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; }
+        p, li { margin-bottom: 1rem; }
+        
+        a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+
+        .back-link { display: block; margin-top: 3rem; text-align: center; }
+
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000; color: #f5f5f7; }
+            .container { background: var(--dark); color: white; }
+            h2 { border-color: #333; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated: April 2026</strong></p>
+
+    <p>WeatherRoute: Safer Navigation respects your privacy. This policy explains how we handle data within our mobile application and website.</p>
+
+    <h2>1. Location Data</h2>
+    <p>To provide weather forecasts along your exact path, this app requires access to your device's location. This data is processed locally to calculate your route and fetch relevant weather data. We do not store your historical location movements on our servers.</p>
+
+    <h2>2. Third-Party Navigation</h2>
+    <p>If you choose to export or open a route in third-party apps (such as Google Maps or Waze), your destination and route data will be shared with those providers according to their respective privacy policies.</p>
+
+    <h2>3. Advertising (Google AdMob)</h2>
+    <p>We use Google AdMob to serve advertisements. To provide relevant ads, Google may collect and use data such as your device's advertising ID. You can manage your ad personalization settings in your device's system settings.</p>
+
+    <h2>4. GDPR & Your Rights</h2>
+    <p>For users in the European Union, we comply with the GDPR. You have the right to access, correct, or request the deletion of any personal data. Since we do not use account-based tracking, most data is handled on-device.</p>
+
+    <h2>5. Data Security</h2>
+    <p>We implement industry-standard technical measures to protect any data transmitted during the fetching of weather forecasts.</p>
+
+    <h2>6. Contact Us</h2>
+    <p>If you have questions regarding this policy, please contact us at:<br>
+    <strong>Email:</strong> <a href="mailto:weatherroute.eu@gmail.com">contact@weatherroute.eu</a></p>
+
+    <a href="/" class="back-link">← Back to Home</a>
+</div>
+
+</body>
+</html>
