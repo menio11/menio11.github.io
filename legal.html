@@ -1,42 +1,88 @@
-<!-- legal.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legal Notice - WeatherRoute: Safer Navigation</title>
-<style>
-body{font-family:Arial,sans-serif;max-width:900px;margin:auto;padding:40px;line-height:1.6;color:#222}
-h1,h2{color:#111}
-a{color:#0066cc;text-decoration:none}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Notice - WeatherRoute: Safer Navigation</title>
+    <style>
+        :root {
+            --primary: #007AFF;
+            --dark: #1c1c1e;
+            --light: #f2f2f7;
+            --text: #1d1d1f;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--light);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h1 { color: var(--primary); margin-top: 0; }
+        h2 { color: #333; margin-top: 2rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem; font-size: 1.3rem; }
+        p { margin-bottom: 1rem; }
+        
+        .contact-info {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+        }
+
+        a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+
+        .back-link { display: block; margin-top: 3rem; text-align: center; }
+
+        @media (prefers-color-scheme: dark) {
+            body { background-color: #000; color: #f5f5f7; }
+            .container { background: var(--dark); color: white; }
+            .contact-info { background: #2c2c2e; }
+            h2 { border-color: #333; color: #eee; }
+        }
+    </style>
 </head>
 <body>
 
-<h1>Legal Notice</h1>
+<div class="container">
+    <h1>Legal Notice</h1>
 
-<p>Website Owner / Publisher:</p>
+    <h2>Website Owner / Publisher</h2>
+    <div class="contact-info">
+        <p>
+            <strong>WeatherRoute</strong><br>
+            Owner: Dimitar Menkov<br>
+            Address: Vladimir Vazov 9, 1510, Sofia, Bulgaria<br>
+            Email: <a href="mailto:WeatherRoute.eu@gmail.com">WeatherRoute.eu@gmail.com</a>
+        </p>
+    </div>
 
-<p>
-WeatherRoute<br>
-Owner: Dimitar Menkov<br>
-Address: Vladimir Vazov 9, 1510, Sofia, Bulgaria<br>
-Email: WeatherRoute.eu@gmail.com
-</p>
+    <h2>Responsibility for Content</h2>
+    <p>We make every effort to keep the information on this website and within the application accurate and up to date. However, weather data is inherently subject to change, and no guarantee of absolute accuracy or timeliness is given.</p>
 
-<h2>Responsibility for Content</h2>
-<p>We make every effort to keep the information on this website accurate and up to date, but no guarantee is given.</p>
+    <h2>External Links</h2>
+    <p>Our service may contain links to external websites (such as navigation providers). We are not responsible for the content, privacy policies, or practices of any third-party websites or services.</p>
 
-<h2>External Links</h2>
-<p>We are not responsible for the content of external websites linked from this site.</p>
+    <h2>Copyright</h2>
+    <p>All content, including text, design elements, and original code on this website and within the WeatherRoute application, is protected by applicable copyright laws unless otherwise stated.</p>
 
-<h2>Copyright</h2>
-<p>All content on this website is protected by applicable copyright laws unless otherwise stated.</p>
+    <h2>Dispute Resolution</h2>
+    <p>The European Commission provides a platform for online dispute resolution (OS), which you can find here: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>. We are not obliged to participate in consumer dispute resolution proceedings before a consumer arbitration board.</p>
 
-<h2>Dispute Resolution</h2>
-<p>We are not obliged to participate in consumer dispute resolution proceedings unless required by law.</p>
-
-<p><a href="/">Back to Home</a></p>
+    <a href="/" class="back-link">← Back to Home</a>
+</div>
 
 </body>
 </html>
