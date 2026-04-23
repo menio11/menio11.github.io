@@ -6,124 +6,162 @@
     <title>WeatherRoute: Safer Navigation</title>
     <style>
         :root {
-            --primary: #007AFF;
-            --dark: #1c1c1e;
-            --light: #f2f2f7;
-            --text: #1d1d1f;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            color: var(--text);
-            background-color: var(--light);
-        }
+    /* WeatherRoute palette (navigation + weather style) */
+    --primary: #0A84FF;          /* iOS-style but slightly deeper */
+    --primary-dark: #0066CC;
+    --secondary: #34C759;       /* safety / “good weather” green */
+    --danger: #FF3B30;          /* storm / alerts */
+    
+    --bg-light: #F2F6FF;         /* cool sky background */
+    --bg-dark: #0B1220;          /* deep night navy */
+    
+    --card-light: #FFFFFF;
+    --card-dark: #121A2A;
 
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 4rem 1.5rem;
-            text-align: center;
-        }
+    --text-light: #0E1726;
+    --text-dark: #F5F7FA;
 
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
+    --muted: #8A93A6;
+}
 
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-top: 10px;
-        }
+/* Base */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-light);
+    background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 60%);
+}
 
-        main {
-            max-width: 800px;
-            margin: -2rem auto 2rem;
-            padding: 0 1.5rem;
-        }
+/* Header - stronger “navigation app” feel */
+header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
+/* subtle “weather glow” overlay */
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+}
 
-        h2 { 
-            margin-top: 0; 
-            color: var(--primary);
-            font-size: 1.5rem;
-        }
-        
-        ul { padding-left: 0; list-style-type: none; }
-        li { 
-            margin-bottom: 1rem; 
-            padding-left: 1.8rem;
-            position: relative; 
-        }
-        li::before { 
-            content: "✓"; 
-            color: var(--primary); 
-            font-weight: bold; 
-            position: absolute; 
-            left: 0; 
-        }
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
 
-        .cta-container { text-align: center; margin: 3rem 0; }
-        
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 18px 36px;
-            text-decoration: none;
-            border-radius: 14px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: transform 0.2s ease;
-        }
-        
-        .cta-button:hover { transform: scale(1.03); }
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
 
-        footer {
-            text-align: center;
-            font-size: 0.9rem;
-            color: #86868b;
-            padding: 4rem 1.5rem;
-        }
+/* Layout */
+main {
+    max-width: 850px;
+    margin: -2rem auto 2rem;
+    padding: 0 1.5rem;
+}
 
-        .footer-links {
-            margin-top: 1rem;
-        }
+/* Cards */
+.card {
+    background: var(--card-light);
+    padding: 2.5rem;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(10, 20, 40, 0.08);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(10, 132, 255, 0.08);
+}
 
-        .footer-links a {
-            color: #86868b;
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.2s;
-        }
+h2 { 
+    margin-top: 0; 
+    color: var(--primary);
+    font-size: 1.5rem;
+    letter-spacing: -0.2px;
+}
 
-        .footer-links a:hover {
-            color: var(--primary);
-            text-decoration: underline;
-        }
+/* list styling */
+ul { padding-left: 0; list-style-type: none; }
 
-        @media (prefers-color-scheme: dark) {
-            body { background-color: #000; color: #f5f5f7; }
-            .card { background: var(--dark); color: white; }
-            footer { color: #6e6e73; }
-            .footer-links a { color: #6e6e73; }
-        }
+li { 
+    margin-bottom: 1rem; 
+    padding-left: 1.8rem;
+    position: relative; 
+}
 
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            .card { padding: 1.5rem; }
-        }
+li::before { 
+    content: "▹"; 
+    color: var(--primary); 
+    font-weight: bold; 
+    position: absolute; 
+    left: 0; 
+}
+
+/* CTA */
+.cta-container { text-align: center; margin: 3rem 0; }
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    padding: 18px 38px;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1.15rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 20px rgba(10, 132, 255, 0.25);
+}
+
+.cta-button:hover { 
+    transform: translateY(-2px) scale(1.02); 
+    box-shadow: 0 14px 28px rgba(10, 132, 255, 0.35);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted);
+    padding: 4rem 1.5rem;
+}
+
+.footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+/* Dark mode (more app-like than default OS switch) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: radial-gradient(circle at top, #0F1A2E 0%, #070B14 100%);
+        color: var(--text-dark);
+    }
+
+    .card {
+        background: var(--card-dark);
+        border: 1px solid rgba(255,255,255,0.06);
+        color: var(--text-dark);
+    }
+
+    footer { color: #7B8496; }
+    .footer-links a { color: #7B8496; }
+}
     </style>
 </head>
 <body>
