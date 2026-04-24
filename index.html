@@ -4,167 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeatherRoute: Safer Navigation</title>
+    
+    <link rel="icon" type="image/png" href="icon.png">
+
     <style>
         :root {
-    /* WeatherRoute palette (navigation + weather style) */
-    --primary: #0A84FF;          /* iOS-style but slightly deeper */
-    --primary-dark: #0066CC;
-    --secondary: #34C759;       /* safety / “good weather” green */
-    --danger: #FF3B30;          /* storm / alerts */
-    
-    --bg-light: #F2F6FF;         /* cool sky background */
-    --bg-dark: #0B1220;          /* deep night navy */
-    
-    --card-light: #FFFFFF;
-    --card-dark: #121A2A;
+            /* WeatherRoute palette (navigation + weather style) */
+            --primary: #0A84FF;          /* iOS-style but slightly deeper */
+            --primary-dark: #0066CC;
+            --secondary: #34C759;       /* safety / “good weather” green */
+            --danger: #FF3B30;          /* storm / alerts */
+            
+            --bg-light: #F2F6FF;         /* cool sky background */
+            --bg-dark: #0B1220;          /* deep night navy */
+            
+            --card-light: #FFFFFF;
+            --card-dark: #121A2A;
 
-    --text-light: #0E1726;
-    --text-dark: #F5F7FA;
+            --text-light: #0E1726;
+            --text-dark: #F5F7FA;
 
-    --muted: #8A93A6;
-}
+            --muted: #8A93A6;
+        }
 
-/* Base */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    color: var(--text-light);
-    background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 60%);
-}
+        /* Base */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-light);
+            background: linear-gradient(180deg, var(--bg-light) 0%, #ffffff 60%);
+        }
 
-/* Header - stronger “navigation app” feel */
-header {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    color: white;
-    padding: 4rem 1.5rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
+        /* Banner styles */
+        .banner {
+            width: 100%;
+            display: block; /* Ensure it is a block element to fill width */
+            margin: 0;
+            padding: 0;
+        }
+        .banner img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Avoid a small gap below the image */
+        }
 
-/* subtle “weather glow” overlay */
-header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 60%);
-    pointer-events: none;
-}
+        /* Header - updated spacing */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 2rem 1.5rem 3rem; /* Reduced top padding, kept bottom */
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
+        /* subtle “weather glow” overlay */
+        header::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top, rgba(255,255,255,0.18), transparent 60%);
+            pointer-events: none;
+        }
 
-header p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    margin-top: 10px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
 
-/* Layout */
-main {
-    max-width: 850px;
-    margin: -2rem auto 2rem;
-    padding: 0 1.5rem;
-}
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
 
-/* Cards */
-.card {
-    background: var(--card-light);
-    padding: 2.5rem;
-    border-radius: 22px;
-    box-shadow: 0 12px 30px rgba(10, 20, 40, 0.08);
-    margin-bottom: 2rem;
-    border: 1px solid rgba(10, 132, 255, 0.08);
-}
+        /* Layout */
+        main {
+            max-width: 850px;
+            margin: -2rem auto 2rem;
+            padding: 0 1.5rem;
+        }
 
-h2 { 
-    margin-top: 0; 
-    color: var(--primary);
-    font-size: 1.5rem;
-    letter-spacing: -0.2px;
-}
+        /* Phone Screenshot Styles */
+        .screenshot-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .screenshot-container img {
+            max-width: 320px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 30px; /* Optional: rounds edges of the image */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
 
-/* list styling */
-ul { padding-left: 0; list-style-type: none; }
+        /* Cards */
+        .card {
+            background: var(--card-light);
+            padding: 2.5rem;
+            border-radius: 22px;
+            box-shadow: 0 12px 30px rgba(10, 20, 40, 0.08);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(10, 132, 255, 0.08);
+        }
 
-li { 
-    margin-bottom: 1rem; 
-    padding-left: 1.8rem;
-    position: relative; 
-}
+        h2 { 
+            margin-top: 0; 
+            color: var(--primary);
+            font-size: 1.5rem;
+            letter-spacing: -0.2px;
+        }
 
-li::before { 
-    content: "▹"; 
-    color: var(--primary); 
-    font-weight: bold; 
-    position: absolute; 
-    left: 0; 
-}
+        /* list styling */
+        ul { padding-left: 0; list-style-type: none; }
 
-/* CTA */
-.cta-container { text-align: center; margin: 3rem 0; }
+        li { 
+            margin-bottom: 1rem; 
+            padding-left: 1.8rem;
+            position: relative; 
+        }
 
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    color: white;
-    padding: 18px 38px;
-    text-decoration: none;
-    border-radius: 16px;
-    font-weight: 700;
-    font-size: 1.15rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 10px 20px rgba(10, 132, 255, 0.25);
-}
+        li::before { 
+            content: "▹"; 
+            color: var(--primary); 
+            font-weight: bold; 
+            position: absolute; 
+            left: 0; 
+        }
 
-.cta-button:hover { 
-    transform: translateY(-2px) scale(1.02); 
-    box-shadow: 0 14px 28px rgba(10, 132, 255, 0.35);
-}
+        /* CTA */
+        .cta-container { text-align: center; margin: 3rem 0; }
 
-/* Footer */
-footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--muted);
-    padding: 4rem 1.5rem;
-}
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 18px 38px;
+            text-decoration: none;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 10px 20px rgba(10, 132, 255, 0.25);
+        }
 
-.footer-links a {
-    color: var(--muted);
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.2s;
-}
+        .cta-button:hover { 
+            transform: translateY(-2px) scale(1.02); 
+            box-shadow: 0 14px 28px rgba(10, 132, 255, 0.35);
+        }
 
-.footer-links a:hover {
-    color: var(--primary);
-}
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--muted);
+            padding: 4rem 1.5rem;
+        }
 
-/* Dark mode (more app-like than default OS switch) */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: radial-gradient(circle at top, #0F1A2E 0%, #070B14 100%);
-        color: var(--text-dark);
-    }
+        .footer-logo {
+            width: 40px; /* Adjust size as needed */
+            height: 40px;
+            display: block;
+            margin: 0 auto 15px; /* Center horizontally, add bottom margin */
+        }
 
-    .card {
-        background: var(--card-dark);
-        border: 1px solid rgba(255,255,255,0.06);
-        color: var(--text-dark);
-    }
+        .footer-links a {
+            color: var(--muted);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.2s;
+        }
 
-    footer { color: #7B8496; }
-    .footer-links a { color: #7B8496; }
-}
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Dark mode (more app-like than default OS switch) */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: radial-gradient(circle at top, #0F1A2E 0%, #070B14 100%);
+                color: var(--text-dark);
+            }
+
+            .card {
+                background: var(--card-dark);
+                border: 1px solid rgba(255,255,255,0.06);
+                color: var(--text-dark);
+            }
+
+            footer { color: #7B8496; }
+            .footer-links a { color: #7B8496; }
+        }
     </style>
 </head>
 <body>
+
+<div class="banner">
+    <img src="WeatherRoute_ Your journey, weather-ready.png" alt="WeatherRoute app banner showing road and weather icons">
+</div>
 
 <header>
     <h1>WeatherRoute: Safer Navigation</h1>
@@ -172,6 +211,10 @@ footer {
 </header>
 
 <main>
+    <div class="screenshot-container">
+        <img src="1.png" alt="App screenshot showing route-specific forecast details from Fairbanks to Anchorage">
+    </div>
+
     <section class="card">
         <h2>Avoid the Storm</h2>
         <p>Most weather apps only show conditions at your destination. **WeatherRoute: Safer Navigation** provides a comprehensive forecast along your entire path, letting you avoid heavy rain, snow, and dangerous winds before you even start your engine.</p>
@@ -194,6 +237,8 @@ footer {
 </main>
 
 <footer>
+    <img src="image_0.png" alt="WeatherRoute app icon" class="footer-logo">
+    
     <p>&copy; 2026 WeatherRoute: Safer Navigation. All rights reserved.</p>
     <div class="footer-links">
         <a href="/privacy.html">Privacy Policy</a>
