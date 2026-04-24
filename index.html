@@ -49,12 +49,33 @@ body{
 }
 
 /* BANNER */
+/* REPLACE your current .banner styles with this */
+
+.banner{
+    width:100%;
+    max-height:260px;
+    overflow:hidden;
+    background:#0A84FF;
+}
+
 .banner img{
     width:100%;
-    height:auto;
+    height:260px;
+    object-fit:cover;
+    object-position:center;
     display:block;
 }
 
+/* Mobile */
+@media (max-width:700px){
+    .banner{
+        max-height:160px;
+    }
+
+    .banner img{
+        height:160px;
+    }
+}
 /* HERO */
 header{
     background:linear-gradient(135deg,var(--primary-dark),var(--primary));
