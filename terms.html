@@ -1,0 +1,739 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use – WeatherRoute</title>
+
+<!-- Site Icon -->
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+
+<style>
+:root{
+    --primary:#0A84FF;
+    --primary-dark:#0066CC;
+
+    --bg:#F4F8FF;
+    --surface:#FFFFFF;
+    --text:#101828;
+    --muted:#667085;
+    --border:rgba(10,132,255,.08);
+    --shadow:0 20px 45px rgba(15,23,42,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(10,132,255,.08), transparent 30%),
+        var(--bg);
+    color:var(--text);
+    line-height:1.65;
+}
+
+.container{
+    width:min(900px, calc(100% - 32px));
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+    color:#fff;
+    text-align:center;
+    padding:70px 20px 110px;
+    position:relative;
+    overflow:hidden;
+}
+
+header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at top, rgba(255,255,255,.16), transparent 55%);
+}
+
+header .inner{
+    position:relative;
+    z-index:2;
+}
+
+header h1{
+    font-size:clamp(2rem,5vw,3.5rem);
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+header p{
+    margin-top:12px;
+    opacity:.92;
+    font-size:1.05rem;
+}
+
+/* MAIN */
+main{
+    margin-top:-60px;
+    position:relative;
+    z-index:3;
+}
+
+.card{
+    background:var(--surface);
+    border-radius:26px;
+    padding:38px;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+}
+
+section{
+    margin-bottom:34px;
+}
+
+section:last-child{
+    margin-bottom:0;
+}
+
+h2{
+    color:var(--primary);
+    font-size:1.35rem;
+    margin-bottom:14px;
+    letter-spacing:-.3px;
+}
+
+p{
+    color:var(--muted);
+    font-size:1rem;
+    margin-bottom:12px;
+}
+
+p:last-child{
+    margin-bottom:0;
+}
+
+ul{
+    color:var(--muted);
+    padding-left:24px;
+    margin-top:12px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+strong{
+    color:var(--text);
+}
+
+a{
+    color:var(--primary);
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* BUTTON */
+.actions{
+    margin-top:34px;
+}
+
+.back-btn{
+    display:inline-block;
+    padding:16px 28px;
+    border-radius:16px;
+    background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    transition:.2s ease;
+    box-shadow:0 16px 30px rgba(10,132,255,.18);
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    color:var(--muted);
+    padding:50px 20px;
+    font-size:.95rem;
+}
+
+/* MOBILE */
+@media (max-width:700px){
+    header{
+        padding:55px 16px 90px;
+    }
+
+    .card{
+        padding:24px;
+        border-radius:22px;
+    }
+
+    main{
+        margin-top:-45px;
+    }
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark){
+:root{
+    --bg:#08111F;
+    --surface:#111B2B;
+    --text:#F8FAFC;
+    --muted:#98A2B3;
+    --border:rgba(255,255,255,.06);
+    --shadow:none;
+}
+
+body{
+    background:
+        radial-gradient(circle at top right, rgba(10,132,255,.14), transparent 30%),
+        #08111F;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="inner">
+        <h1>Terms of Use</h1>
+        <p>Last updated: August 26, 2026</p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="card">
+
+        <section>
+            <p>
+                Welcome to WeatherRoute. These Terms of Use ("Terms")
+                govern your use of the WeatherRoute website, mobile
+                application, and related services (collectively, the
+                "Service").
+            </p>
+
+            <p>
+                By accessing or using WeatherRoute, you agree to these
+                Terms. If you do not agree with them, please do not use
+                the Service.
+            </p>
+        </section>
+
+        <section>
+            <h2>1. About WeatherRoute</h2>
+            <p>
+                WeatherRoute is a free weather and route-planning
+                service designed to help users view weather information
+                and plan journeys based on available weather and route
+                data.
+            </p>
+
+            <p>
+                WeatherRoute is currently provided without user
+                payments, subscriptions, cryptocurrency functionality,
+                or financial services.
+            </p>
+
+            <p>
+                The Service may display advertisements provided by
+                third-party advertising providers.
+            </p>
+        </section>
+
+        <section>
+            <h2>2. Eligibility</h2>
+            <p>
+                You may use WeatherRoute provided that you are legally
+                permitted to use the Service under the laws applicable
+                to you.
+            </p>
+
+            <p>
+                If you use WeatherRoute on behalf of another person or
+                organization, you confirm that you have authority to
+                accept these Terms on their behalf.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Weather and Route Information</h2>
+            <p>
+                WeatherRoute relies on weather forecasts, mapping
+                information, route data, geographic information, and
+                other information obtained from third-party sources
+                and services.
+            </p>
+
+            <p>
+                Weather and route information can be incomplete,
+                delayed, inaccurate, or unavailable.
+            </p>
+
+            <p>WeatherRoute does not guarantee:</p>
+
+            <ul>
+                <li>the accuracy, completeness, or reliability of weather information;</li>
+                <li>that forecasts will correctly predict actual weather conditions;</li>
+                <li>that routes are safe, suitable, or accessible;</li>
+                <li>that roads, paths, trails, transport services, or other infrastructure are open or available;</li>
+                <li>that information will be continuously available or up to date.</li>
+            </ul>
+
+            <p>
+                WeatherRoute is intended for general informational and
+                planning purposes only.
+            </p>
+
+            <p>
+                <strong>
+                    Do not rely on WeatherRoute as your sole source of
+                    information for decisions involving personal
+                    safety, severe weather, emergencies, travel
+                    restrictions, navigation, or other situations where
+                    inaccurate information could result in injury, loss,
+                    or damage.
+                </strong>
+            </p>
+
+            <p>
+                Always use appropriate official sources, local
+                authorities, road signs, emergency services, and your
+                own judgment where appropriate.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. No Professional or Safety Advice</h2>
+            <p>
+                WeatherRoute does not provide professional
+                meteorological, transportation, medical, emergency,
+                legal, or safety advice.
+            </p>
+
+            <p>
+                Information displayed by the Service should not be
+                interpreted as a guarantee that a journey or activity
+                is safe.
+            </p>
+
+            <p>
+                You are solely responsible for assessing conditions
+                and deciding whether to travel or undertake an
+                activity.
+            </p>
+
+            <p>
+                In an emergency, contact the appropriate local
+                emergency services rather than relying on WeatherRoute.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Location and GPS Information</h2>
+            <p>
+                Certain WeatherRoute features may use your device's
+                location or GPS information to provide location-based
+                weather or route information.
+            </p>
+
+            <p>
+                Location accuracy depends on your device, operating
+                system, network connection, GPS availability, and other
+                factors.
+            </p>
+
+            <p>
+                You are responsible for granting or denying location
+                permissions through your device settings.
+            </p>
+
+            <p>
+                WeatherRoute does not guarantee that location
+                information will always be accurate.
+            </p>
+
+            <p>
+                Please see the
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                for information about how location and other personal
+                data may be handled.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Third-Party Services and Data</h2>
+            <p>
+                WeatherRoute may use third-party services for weather
+                data, maps, routing, hosting, analytics, advertising,
+                location services, or other functionality.
+            </p>
+
+            <p>
+                Third-party services may have their own terms, privacy
+                policies, limitations, and availability requirements.
+            </p>
+
+            <p>
+                WeatherRoute is not responsible for the independent
+                operation, availability, accuracy, content, or policies
+                of third-party services.
+            </p>
+
+            <p>
+                Where appropriate, your use of a third-party service
+                may also be subject to that provider's terms and
+                policies.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Advertising</h2>
+            <p>
+                WeatherRoute may display advertisements from
+                third-party advertising providers, including Google
+                AdMob.
+            </p>
+
+            <p>
+                Advertisements may be selected or delivered by third
+                parties based on factors determined by those providers.
+            </p>
+
+            <p>
+                WeatherRoute does not necessarily endorse, guarantee,
+                or recommend products, services, or claims appearing in
+                advertisements.
+            </p>
+
+            <p>
+                Any interaction, purchase, or other transaction you
+                undertake with an advertiser is between you and the
+                relevant third party.
+            </p>
+
+            <p>
+                WeatherRoute is not responsible for the products,
+                services, content, or practices of advertisers.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Acceptable Use</h2>
+            <p>You agree not to:</p>
+
+            <ul>
+                <li>use WeatherRoute for unlawful purposes;</li>
+                <li>interfere with or attempt to disrupt the Service;</li>
+                <li>attempt to gain unauthorized access to WeatherRoute systems;</li>
+                <li>reverse engineer or circumvent technical protections except where permitted by applicable law;</li>
+                <li>use automated systems to abuse, overload, scrape, or disrupt the Service;</li>
+                <li>introduce malicious software or harmful code;</li>
+                <li>use the Service in a way that could damage WeatherRoute or its users;</li>
+                <li>misrepresent your identity or affiliation in connection with the Service.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>9. Intellectual Property</h2>
+            <p>
+                Unless otherwise stated, WeatherRoute and its original
+                software, design, branding, graphics, text, interfaces,
+                and other original materials are owned by or licensed
+                to the operator of WeatherRoute.
+            </p>
+
+            <p>
+                You may use the Service for its intended personal
+                purposes.
+            </p>
+
+            <p>
+                You may not copy, reproduce, distribute, modify, sell,
+                sublicense, or commercially exploit WeatherRoute's
+                proprietary materials without appropriate
+                authorization, except where such use is permitted by
+                applicable law.
+            </p>
+
+            <p>
+                Third-party trademarks, data, maps, logos, and other
+                materials remain the property of their respective
+                owners.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. Service Availability</h2>
+            <p>
+                WeatherRoute is provided on an "as available" basis.
+            </p>
+
+            <p>
+                We may modify, suspend, restrict, or discontinue any
+                part of the Service at any time, including individual
+                features or data sources.
+            </p>
+
+            <p>
+                We do not guarantee that WeatherRoute will always be
+                available, uninterrupted, secure, or error-free.
+            </p>
+
+            <p>
+                Service availability may depend on third-party
+                providers, internet connectivity, device
+                functionality, operating-system restrictions, and
+                other factors outside our reasonable control.
+            </p>
+        </section>
+
+        <section>
+            <h2>11. Disclaimer of Warranties</h2>
+            <p>
+                To the maximum extent permitted by applicable law,
+                WeatherRoute is provided without warranties or
+                guarantees of any kind, whether express or implied.
+            </p>
+
+            <p>We do not guarantee that:</p>
+
+            <ul>
+                <li>the Service will meet your particular requirements;</li>
+                <li>information will always be accurate or current;</li>
+                <li>forecasts will correspond to actual weather conditions;</li>
+                <li>routes will be appropriate or safe;</li>
+                <li>the Service will be uninterrupted or error-free;</li>
+                <li>defects will always be corrected;</li>
+                <li>the Service will be available at any particular time or location.</li>
+            </ul>
+
+            <p>
+                Nothing in these Terms excludes or limits any consumer
+                rights or legal protections that cannot lawfully be
+                excluded under applicable law.
+            </p>
+        </section>
+
+        <section>
+            <h2>12. Limitation of Liability</h2>
+            <p>
+                To the maximum extent permitted by applicable law, the
+                operator of WeatherRoute will not be liable for
+                indirect, incidental, special, consequential, or
+                unforeseeable losses arising from or relating to your
+                use of, or inability to use, the Service.
+            </p>
+
+            <p>
+                This includes, where legally permitted, losses arising
+                from reliance on weather information, route
+                information, location information, third-party data,
+                advertisements, service interruptions, or inaccurate
+                or unavailable information.
+            </p>
+
+            <p>
+                Nothing in these Terms excludes or limits liability
+                that cannot legally be excluded or limited, including
+                liability arising from mandatory consumer-protection
+                laws or other applicable law.
+            </p>
+        </section>
+
+        <section>
+            <h2>13. Your Responsibility</h2>
+            <p>
+                You are responsible for using your own judgment when
+                relying on information provided by WeatherRoute.
+            </p>
+
+            <p>
+                Before travelling or undertaking activities affected
+                by weather or road conditions, you should verify
+                relevant information using appropriate official and
+                local sources.
+            </p>
+
+            <p>
+                You remain responsible for complying with applicable
+                laws, traffic regulations, safety requirements, travel
+                restrictions, and other rules.
+            </p>
+        </section>
+
+        <section>
+            <h2>14. Privacy</h2>
+            <p>
+                Your use of WeatherRoute may involve the processing of
+                personal or technical information, including
+                information associated with your device or location
+                where applicable.
+            </p>
+
+            <p>
+                The collection and use of personal information is
+                described in the WeatherRoute
+                <a href="/privacy-policy.html">Privacy Policy</a>.
+            </p>
+
+            <p>
+                The Privacy Policy forms part of the overall terms
+                governing your use of the Service where applicable.
+            </p>
+        </section>
+
+        <section>
+            <h2>15. Changes to These Terms</h2>
+            <p>
+                We may update these Terms from time to time.
+            </p>
+
+            <p>
+                When changes are made, the "Last updated" date at the
+                beginning of these Terms will be updated.
+            </p>
+
+            <p>
+                Your continued use of WeatherRoute after updated Terms
+                become available constitutes acceptance of the revised
+                Terms, to the extent permitted by applicable law.
+            </p>
+
+            <p>
+                If a change materially affects your rights, we may
+                provide additional notice where appropriate.
+            </p>
+        </section>
+
+        <section>
+            <h2>16. Termination</h2>
+            <p>
+                You may stop using WeatherRoute at any time.
+            </p>
+
+            <p>
+                We may suspend or discontinue your access to the
+                Service where reasonably necessary, including where
+                you violate these Terms, misuse the Service, or where
+                the Service itself is discontinued.
+            </p>
+
+            <p>
+                Sections that by their nature should continue after
+                termination, including intellectual-property,
+                disclaimers, limitations of liability, and applicable
+                legal provisions, will continue to apply.
+            </p>
+        </section>
+
+        <section>
+            <h2>17. Governing Law</h2>
+            <p>
+                These Terms are intended to be governed by the laws of
+                the Republic of Bulgaria, without prejudice to any
+                mandatory consumer-protection rights or other mandatory
+                provisions that apply to you under the law of your
+                country of residence.
+            </p>
+
+            <p>
+                If you are a consumer residing in the European Union,
+                nothing in these Terms is intended to deprive you of
+                rights that cannot legally be waived under applicable
+                EU or national consumer-protection law.
+            </p>
+        </section>
+
+        <section>
+            <h2>18. Disputes</h2>
+            <p>
+                We encourage users to contact WeatherRoute first to
+                attempt to resolve any issue informally.
+            </p>
+
+            <p>
+                Nothing in these Terms prevents a consumer from
+                exercising any mandatory rights to bring a claim before
+                a competent court or use an applicable alternative
+                dispute-resolution mechanism.
+            </p>
+        </section>
+
+        <section>
+            <h2>19. Severability</h2>
+            <p>
+                If any provision of these Terms is found to be invalid,
+                unlawful, or unenforceable, that provision will be
+                interpreted or modified to the minimum extent
+                necessary to make it enforceable where legally
+                possible.
+            </p>
+
+            <p>
+                The remaining provisions will continue in full force
+                and effect.
+            </p>
+        </section>
+
+        <section>
+            <h2>20. Entire Agreement</h2>
+            <p>
+                These Terms, together with the WeatherRoute Privacy
+                Policy and any additional terms expressly applicable
+                to specific features of the Service, constitute the
+                agreement governing your use of WeatherRoute.
+            </p>
+        </section>
+
+        <section>
+            <h2>21. Contact</h2>
+            <p>
+                For questions, feedback, legal notices, or other
+                matters concerning these Terms, please contact
+                WeatherRoute at:
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:weatherroute.eu@gmail.com">
+                    WeatherRoute.eu@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Website:</strong>
+                <a href="https://weatherroute.eu">
+                    WeatherRoute.eu
+                </a>
+            </p>
+        </section>
+
+        <div class="actions">
+            <a href="/" class="back-btn">← Back to Home</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    © 2026 WeatherRoute. All rights reserved.
+</footer>
+
+</body>
+</html>
+```
